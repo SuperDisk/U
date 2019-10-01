@@ -1,0 +1,15 @@
+clear5
+
+label start
+case 2
+goto end
+goto end
+goto hash
+
+label hash
+push# 5
+goto start
+
+
+label end
+push1 3

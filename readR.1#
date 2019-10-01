@@ -1,0 +1,150 @@
+label findR
+case 3
+goto findRend
+jump 1
+jump 1
+
+label moveR
+case 1
+goto rj_empty
+goto rj_1
+goto rj_#
+
+label rj_empty
+push# 2
+push# 2
+goto moveRend
+
+label rj_1
+push1 2
+
+case 1
+goto shouldnt_happen
+goto push1_2
+goto push#_2
+
+label shouldnt_happen
+push1 3
+goto moveR
+
+label push1_2
+push1 2
+goto moveR
+
+label push#_2
+push# 2
+goto moveR
+
+
+label rj_#
+case 1
+goto write##
+goto write##
+goto write##
+
+label write##
+push# 2
+push# 2
+
+label moveRend
+
+goto findR
+
+label findRend
+
+case 1
+goto twoHashes
+goto rendWith1
+goto rendWith#
+
+label rendWith1
+push1 3
+goto findRend2
+
+label rendWith#
+push# 3
+goto findRend2
+
+label twoHashes
+push# 1
+push# 1
+goto findRend3
+
+label findRend2
+
+case 1
+jump 6
+jump 3
+push# 3
+jumpb 4
+push1 3
+jumpb 6
+
+case 3
+jump 6
+jump 3
+push# 1
+jumpb 4
+push1 1
+jumpb 6
+
+label findRend3
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+case 1
+push# 4
+goto step3
+goto twoSharps
+
+label twoSharps
+case 1
+jump 1
+jump 1
+jump 1
+push# 2
+push# 2
+goto step4
+
+label step3
+case 1
+push# 4
+goto doPush1
+goto doPush#
+
+label doPush1
+push1 3
+goto step4
+
+label doPush#
+push# 3
+goto step4
+
+
+label step4
+
+case 1
+jump 6
+jump 3
+push# 2
+jumpb 4
+push1 2
+jumpb 6
+
+case 2
+jump 6
+jump 3
+push# 1
+jumpb 4
+push1 1
+jumpb 6
+
+case 3
+jump 6
+jump 3
+push# 2
+jumpb 4
+push1 2
+jumpb 6
+
+label readRend

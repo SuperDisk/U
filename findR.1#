@@ -1,0 +1,22 @@
+label findR
+case 3
+goto findRend
+jump 1
+jump 1
+
+import_moveR
+
+goto findR
+
+label findRend
+
+case 1
+goto twoHashes
+goto findRend2
+goto findRend2
+
+label twoHashes
+push# 1
+push# 1
+
+label findRend2

@@ -1,0 +1,43 @@
+label moveR
+case 1
+goto rj_empty
+goto rj_1
+goto rj_#
+
+label rj_empty
+push# 2
+push# 2
+goto moveRend
+
+label rj_1
+push1 2
+
+case 1
+goto shouldnt_happen
+goto push1_2
+goto push#_2
+
+label shouldnt_happen
+push1 3
+goto moveR
+
+label push1_2
+push1 2
+goto moveR
+
+label push#_2
+push# 2
+goto moveR
+
+
+label rj_#
+case 1
+goto write##
+goto write##
+goto write##
+
+label write##
+push# 2
+push# 2
+
+label moveRend
