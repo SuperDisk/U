@@ -1,0 +1,501 @@
+1##### ;Line 1 - Case on R1 (Label main)
+11111111### ;Line 2 - Jump forward 8 lines
+1111### ;Line 3 - Jump forward 4 lines
+111## ;Line 4 - Append # to R3
+11## ;Line 5 - Append # to R2
+11111#### ;Line 6 - Jump backwards 5 lines
+111# ;Line 7 - Append 1 to R3
+11# ;Line 8 - Append 1 to R2
+11111111#### ;Line 9 - Jump backwards 8 lines
+11##### ;Line 10 - Case on R2
+111111### ;Line 11 - Jump forward 6 lines
+111### ;Line 12 - Jump forward 3 lines
+1## ;Line 13 - Append # to R1
+1111#### ;Line 14 - Jump backwards 4 lines
+1# ;Line 15 - Append 1 to R1
+111111#### ;Line 16 - Jump backwards 6 lines
+111##### ;Line 17 - Case on R3
+1111111### ;Line 18 - Jump forward 7 lines
+11#### ;Line 19 - Jump backwards 2 lines
+1111# ;Line 20 - Append 1 to R4
+111##### ;Line 21 - Case on R3
+111### ;Line 22 - Jump forward 3 lines
+111111#### ;Line 23 - Jump backwards 6 lines
+111#### ;Line 24 - Jump backwards 3 lines
+111111##### ;Line 25 - Case on R6 (Label U)
+111### ;Line 26 - Jump forward 3 lines
+11#### ;Line 27 - Jump backwards 2 (Goto U)
+111#### ;Line 28 - Jump backwards 3 (Goto U)
+11111##### ;Line 29 - Case on R5
+111### ;Line 30 - Jump forward 3 lines
+111111#### ;Line 31 - Jump backwards 6 (Goto U)
+1111111#### ;Line 32 - Jump backwards 7 (Goto U)
+111##### ;Line 33 - Case on R3 (Label pcCompareStart)
+11111111### ;Line 34 - Jump forward 8 lines
+1111### ;Line 35 - Jump forward 4 lines
+11111## ;Line 36 - Append # to R5
+11## ;Line 37 - Append # to R2
+11111#### ;Line 38 - Jump backwards 5 lines
+11111# ;Line 39 - Append 1 to R5
+11# ;Line 40 - Append 1 to R2
+11111111#### ;Line 41 - Jump backwards 8 lines
+11##### ;Line 42 - Case on R2
+111111### ;Line 43 - Jump forward 6 lines
+111### ;Line 44 - Jump forward 3 lines
+111## ;Line 45 - Append # to R3
+1111#### ;Line 46 - Jump backwards 4 lines
+111# ;Line 47 - Append 1 to R3
+111111#### ;Line 48 - Jump backwards 6 lines
+1111##### ;Line 49 - Case on R4
+11111111### ;Line 50 - Jump forward 8 lines
+1111### ;Line 51 - Jump forward 4 lines
+111111## ;Line 52 - Append # to R6
+11## ;Line 53 - Append # to R2
+11111#### ;Line 54 - Jump backwards 5 lines
+111111# ;Line 55 - Append 1 to R6
+11# ;Line 56 - Append 1 to R2
+11111111#### ;Line 57 - Jump backwards 8 lines
+11##### ;Line 58 - Case on R2
+111111### ;Line 59 - Jump forward 6 lines
+111### ;Line 60 - Jump forward 3 lines
+1111## ;Line 61 - Append # to R4
+1111#### ;Line 62 - Jump backwards 4 lines
+1111# ;Line 63 - Append 1 to R4
+111111#### ;Line 64 - Jump backwards 6 lines
+11111# ;Line 65 - Append 1 to R5
+111111##### ;Line 66 - Case on R6 (Label pcCompare)
+1111111### ;Line 67 - Jump forward 7 (Goto pcCompareClear6)
+11### ;Line 68 - Jump forward 2 (Goto pcCompareCheck5)
+1111111111111## ;Line 69 - Append # to R13
+11111##### ;Line 70 - Case on R5 (Label pcCompareCheck5)
+1111111### ;Line 71 - Jump forward 7 (Goto pcCompareEnd)
+111111#### ;Line 72 - Jump backwards 6 (Goto pcCompare)
+11111111111111## ;Line 73 - Append # to R14
+111111##### ;Line 74 - Case on R6 (Label pcCompareClear6)
+111### ;Line 75 - Jump forward 3 (Goto pcCompareEnd)
+11#### ;Line 76 - Jump backwards 2 (Goto pcCompareClear6)
+111#### ;Line 77 - Jump backwards 3 (Goto pcCompareClear6)
+11111##### ;Line 78 - Case on R5 (Label pcCompareEnd)
+111### ;Line 79 - Jump forward 3 (Goto getInstructionX)
+11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111### ;Line 80 - Jump forward 422 (Goto UEnd)
+111111111111111## ;Line 81 - Append # to R15
+111## ;Line 82 - Append # to R3 (Label getInstructionX)
+111##### ;Line 83 - Case on R3
+1111111111111111## ;Line 84 - Append # to R16
+1111### ;Line 85 - Jump forward 4 lines
+1### ;Line 86 - Jump forward 1 lines
+111# ;Line 87 - Append 1 to R3
+1111111111111111111111### ;Line 88 - Jump forward 22 lines
+111# ;Line 89 - Append 1 to R3
+1111111# ;Line 90 - Append 1 to R7
+111111### ;Line 91 - Jump forward 6 lines
+111# ;Line 92 - Append 1 to R3
+111##### ;Line 93 - Case on R3
+11111111111111111## ;Line 94 - Append # to R17
+11### ;Line 95 - Jump forward 2 lines
+11111111111111### ;Line 96 - Jump forward 14 lines
+1##### ;Line 97 - Case on R1
+111111111111111111## ;Line 98 - Append # to R18
+11### ;Line 99 - Jump forward 2 lines
+111### ;Line 100 - Jump forward 3 lines
+11# ;Line 101 - Append 1 to R2
+11111#### ;Line 102 - Jump backwards 5 lines
+11## ;Line 103 - Append # to R2
+1##### ;Line 104 - Case on R1
+11111111#### ;Line 105 - Jump backwards 8 lines
+11### ;Line 106 - Jump forward 2 lines
+1111#### ;Line 107 - Jump backwards 4 lines
+11# ;Line 108 - Append 1 to R2
+11111111111111111#### ;Line 109 - Jump backwards 17 lines
+1##### ;Line 110 - Case on R1
+11111111111111### ;Line 111 - Jump forward 14 lines
+11### ;Line 112 - Jump forward 2 lines
+1111### ;Line 113 - Jump forward 4 lines
+11# ;Line 114 - Append 1 to R2
+1111111# ;Line 115 - Append 1 to R7
+111111#### ;Line 116 - Jump backwards 6 lines
+11## ;Line 117 - Append # to R2
+1111111## ;Line 118 - Append # to R7
+1##### ;Line 119 - Case on R1
+11111### ;Line 120 - Jump forward 5 lines
+11### ;Line 121 - Jump forward 2 lines
+11111#### ;Line 122 - Jump backwards 5 lines
+11# ;Line 123 - Append 1 to R2
+1### ;Line 124 - Jump forward 1 lines
+1##### ;Line 125 - Case on R1
+111111### ;Line 126 - Jump forward 6 lines
+111### ;Line 127 - Jump forward 3 lines
+11## ;Line 128 - Append # to R2
+1111#### ;Line 129 - Jump backwards 4 lines
+11# ;Line 130 - Append 1 to R2
+111111#### ;Line 131 - Jump backwards 6 lines
+11##### ;Line 132 - Case on R2
+111111### ;Line 133 - Jump forward 6 lines
+111### ;Line 134 - Jump forward 3 lines
+1## ;Line 135 - Append # to R1
+1111#### ;Line 136 - Jump backwards 4 lines
+1# ;Line 137 - Append 1 to R1
+111111#### ;Line 138 - Jump backwards 6 lines
+1### ;Line 139 - Jump forward 1 lines
+1### ;Line 140 - Jump forward 1 lines
+1### ;Line 141 - Jump forward 1 lines
+1111111##### ;Line 142 - Case on R7 (Label getInstructionEndX) (Label parse1Start)
+1111111### ;Line 143 - Jump forward 7 (Goto parse1End)
+11### ;Line 144 - Jump forward 2 (Goto parse1One)
+111### ;Line 145 - Jump forward 3 (Goto fixParse1#AndEnd)
+11111111# ;Line 146 - Append 1 to R8 (Label parse1One)
+11111#### ;Line 147 - Jump backwards 5 (Goto parse1Start)
+1111111## ;Line 148 - Append # to R7 (Label fixParse1#AndEnd)
+1### ;Line 149 - Jump forward 1 (Goto parse1End)
+1111111##### ;Line 150 - Case on R7 (Label parse1End)
+11111111111111111111## ;Line 151 - Append # to R20
+111111111111111111111## ;Line 152 - Append # to R21
+1### ;Line 153 - Jump forward 1 (Goto USharpOneCase)
+1111111##### ;Line 154 - Case on R7 (Label USharpOneCase)
+1111111111111111111### ;Line 155 - Jump forward 19 (Goto UDoWrite1)
+1111111111111111111111## ;Line 156 - Append # to R22
+1### ;Line 157 - Jump forward 1 (Goto USharpTwoCase)
+1111111##### ;Line 158 - Case on R7 (Label USharpTwoCase)
+11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111### ;Line 159 - Jump forward 116 (Goto UDoWrite#)
+11111111111111111111111## ;Line 160 - Append # to R23
+1### ;Line 161 - Jump forward 1 (Goto USharpThreeCase)
+1111111##### ;Line 162 - Case on R7 (Label USharpThreeCase)
+111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111### ;Line 163 - Jump forward 213 (Goto UDoJumpForward)
+111111111111111111111111## ;Line 164 - Append # to R24
+1### ;Line 165 - Jump forward 1 (Goto USharpFourCase)
+1111111##### ;Line 166 - Case on R7 (Label USharpFourCase)
+11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111### ;Line 167 - Jump forward 221 (Goto UDoJumpBackward)
+1111111111111111111111111## ;Line 168 - Append # to R25
+1### ;Line 169 - Jump forward 1 (Goto USharpFiveCase)
+1111111##### ;Line 170 - Case on R7 (Label USharpFiveCase)
+11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111### ;Line 171 - Jump forward 227 (Goto UDoCases)
+11111111111111111111111111## ;Line 172 - Append # to R26
+111111111111111111111111111## ;Line 173 - Append # to R27
+11111111111# ;Line 174 - Append 1 to R11 (Label UDoWrite1)
+11111111##### ;Line 175 - Case on R8
+1### ;Line 176 - Jump forward 1 lines
+1### ;Line 177 - Jump forward 1 lines
+1### ;Line 178 - Jump forward 1 lines
+11111111##### ;Line 179 - Case on R8 (Label findRwriteR)
+1111111111111111111111111111### ;Line 180 - Jump forward 28 (Goto findRendwriteR)
+1### ;Line 181 - Jump forward 1 lines
+1### ;Line 182 - Jump forward 1 lines
+111111111##### ;Line 183 - Case on R9 (Label moveRwriteR)
+111### ;Line 184 - Jump forward 3 (Goto rj_emptywriteR)
+11111### ;Line 185 - Jump forward 5 (Goto rj_1writeR)
+111111111111111### ;Line 186 - Jump forward 15 (Goto rj_#writeR)
+1111111111## ;Line 187 - Append # to R10 (Label rj_emptywriteR)
+1111111111## ;Line 188 - Append # to R10
+111111111111111111### ;Line 189 - Jump forward 18 (Goto moveRendwriteR)
+1111111111# ;Line 190 - Append 1 to R10 (Label rj_1writeR)
+111111111##### ;Line 191 - Case on R9
+111### ;Line 192 - Jump forward 3 (Goto shouldnt_happenwriteR)
+1111### ;Line 193 - Jump forward 4 (Goto push1_2writeR)
+11111### ;Line 194 - Jump forward 5 (Goto push#_2writeR)
+11111111# ;Line 195 - Append 1 to R8 (Label shouldnt_happenwriteR)
+1111111111111#### ;Line 196 - Jump backwards 13 (Goto moveRwriteR)
+1111111111# ;Line 197 - Append 1 to R10 (Label push1_2writeR)
+111111111111111#### ;Line 198 - Jump backwards 15 (Goto moveRwriteR)
+1111111111## ;Line 199 - Append # to R10 (Label push#_2writeR)
+11111111111111111#### ;Line 200 - Jump backwards 17 (Goto moveRwriteR)
+111111111##### ;Line 201 - Case on R9 (Label rj_#writeR)
+111### ;Line 202 - Jump forward 3 (Goto write##writeR)
+11### ;Line 203 - Jump forward 2 (Goto write##writeR)
+1### ;Line 204 - Jump forward 1 (Goto write##writeR)
+1111111111## ;Line 205 - Append # to R10 (Label write##writeR)
+1111111111## ;Line 206 - Append # to R10
+1111111111111111111111111111#### ;Line 207 - Jump backwards 28 (Goto findRwriteR) (Label moveRendwriteR)
+111111111##### ;Line 208 - Case on R9 (Label findRendwriteR)
+1111111### ;Line 209 - Jump forward 7 (Goto twoHasheswriteR)
+11### ;Line 210 - Jump forward 2 (Goto rendWith1writeR)
+111### ;Line 211 - Jump forward 3 (Goto rendWith#writeR)
+11111111# ;Line 212 - Append 1 to R8 (Label rendWith1writeR)
+111111### ;Line 213 - Jump forward 6 (Goto findRend2writeR)
+11111111## ;Line 214 - Append # to R8 (Label rendWith#writeR)
+1111### ;Line 215 - Jump forward 4 (Goto findRend2writeR)
+111111111## ;Line 216 - Append # to R9 (Label twoHasheswriteR)
+111111111## ;Line 217 - Append # to R9
+111111111111111### ;Line 218 - Jump forward 15 (Goto findRend3writeR)
+111111111##### ;Line 219 - Case on R9 (Label findRend2writeR)
+111111### ;Line 220 - Jump forward 6 lines
+111### ;Line 221 - Jump forward 3 lines
+11111111## ;Line 222 - Append # to R8
+1111#### ;Line 223 - Jump backwards 4 lines
+11111111# ;Line 224 - Append 1 to R8
+111111#### ;Line 225 - Jump backwards 6 lines
+11111111##### ;Line 226 - Case on R8
+111111### ;Line 227 - Jump forward 6 lines
+111### ;Line 228 - Jump forward 3 lines
+111111111## ;Line 229 - Append # to R9
+1111#### ;Line 230 - Jump backwards 4 lines
+111111111# ;Line 231 - Append 1 to R9
+111111#### ;Line 232 - Jump backwards 6 lines
+111111111##### ;Line 233 - Case on R9 (Label findRend3writeR) (Label moveR#writeR)
+11111111111111111111111111## ;Line 234 - Append # to R26
+11### ;Line 235 - Jump forward 2 (Goto rj_1#writeR)
+1111111111### ;Line 236 - Jump forward 10 (Goto rj_##writeR)
+1111111111# ;Line 237 - Append 1 to R10 (Label rj_1#writeR)
+111111111##### ;Line 238 - Case on R9
+11111111111111111111111111## ;Line 239 - Append # to R26
+11### ;Line 240 - Jump forward 2 (Goto push1_2#writeR)
+111### ;Line 241 - Jump forward 3 (Goto push#_2#writeR)
+1111111111# ;Line 242 - Append 1 to R10 (Label push1_2#writeR)
+1111111111#### ;Line 243 - Jump backwards 10 (Goto moveR#writeR)
+1111111111## ;Line 244 - Append # to R10 (Label push#_2#writeR)
+111111111111#### ;Line 245 - Jump backwards 12 (Goto moveR#writeR)
+111111111##### ;Line 246 - Case on R9 (Label rj_##writeR)
+1### ;Line 247 - Jump forward 1 lines
+1### ;Line 248 - Jump forward 1 lines
+1### ;Line 249 - Jump forward 1 lines
+1111111111# ;Line 250 - Append 1 to R10
+11111111111##### ;Line 251 - Case on R11
+11111111111111111111111111## ;Line 252 - Append # to R26
+11### ;Line 253 - Jump forward 2 (Goto writeInsert1writeR)
+111### ;Line 254 - Jump forward 3 (Goto writeInsert#writeR)
+1111111111# ;Line 255 - Append 1 to R10 (Label writeInsert1writeR)
+11### ;Line 256 - Jump forward 2 (Goto writeTheSharpswriteR)
+1111111111## ;Line 257 - Append # to R10 (Label writeInsert#writeR)
+1111111111## ;Line 258 - Append # to R10 (Label writeTheSharpswriteR)
+1111111111## ;Line 259 - Append # to R10
+111111111##### ;Line 260 - Case on R9
+111111### ;Line 261 - Jump forward 6 lines
+111### ;Line 262 - Jump forward 3 lines
+1111111111## ;Line 263 - Append # to R10
+1111#### ;Line 264 - Jump backwards 4 lines
+1111111111# ;Line 265 - Append 1 to R10
+111111#### ;Line 266 - Jump backwards 6 lines
+1111111111##### ;Line 267 - Case on R10
+111111### ;Line 268 - Jump forward 6 lines
+111### ;Line 269 - Jump forward 3 lines
+111111111## ;Line 270 - Append # to R9
+1111#### ;Line 271 - Jump backwards 4 lines
+111111111# ;Line 272 - Append 1 to R9
+111111#### ;Line 273 - Jump backwards 6 lines
+111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111#### ;Line 274 - Jump backwards 249 (Goto U) (Label moveRend#writeR)
+11111111111## ;Line 275 - Append # to R11 (Label UDoWrite#)
+11111111##### ;Line 276 - Case on R8
+1### ;Line 277 - Jump forward 1 lines
+1### ;Line 278 - Jump forward 1 lines
+1### ;Line 279 - Jump forward 1 lines
+11111111##### ;Line 280 - Case on R8 (Label findRwriteR1)
+1111111111111111111111111111### ;Line 281 - Jump forward 28 (Goto findRendwriteR1)
+1### ;Line 282 - Jump forward 1 lines
+1### ;Line 283 - Jump forward 1 lines
+111111111##### ;Line 284 - Case on R9 (Label moveRwriteR1)
+111### ;Line 285 - Jump forward 3 (Goto rj_emptywriteR1)
+11111### ;Line 286 - Jump forward 5 (Goto rj_1writeR1)
+111111111111111### ;Line 287 - Jump forward 15 (Goto rj_#writeR1)
+1111111111## ;Line 288 - Append # to R10 (Label rj_emptywriteR1)
+1111111111## ;Line 289 - Append # to R10
+111111111111111111### ;Line 290 - Jump forward 18 (Goto moveRendwriteR1)
+1111111111# ;Line 291 - Append 1 to R10 (Label rj_1writeR1)
+111111111##### ;Line 292 - Case on R9
+111### ;Line 293 - Jump forward 3 (Goto shouldnt_happenwriteR1)
+1111### ;Line 294 - Jump forward 4 (Goto push1_2writeR1)
+11111### ;Line 295 - Jump forward 5 (Goto push#_2writeR1)
+11111111# ;Line 296 - Append 1 to R8 (Label shouldnt_happenwriteR1)
+1111111111111#### ;Line 297 - Jump backwards 13 (Goto moveRwriteR1)
+1111111111# ;Line 298 - Append 1 to R10 (Label push1_2writeR1)
+111111111111111#### ;Line 299 - Jump backwards 15 (Goto moveRwriteR1)
+1111111111## ;Line 300 - Append # to R10 (Label push#_2writeR1)
+11111111111111111#### ;Line 301 - Jump backwards 17 (Goto moveRwriteR1)
+111111111##### ;Line 302 - Case on R9 (Label rj_#writeR1)
+111### ;Line 303 - Jump forward 3 (Goto write##writeR1)
+11### ;Line 304 - Jump forward 2 (Goto write##writeR1)
+1### ;Line 305 - Jump forward 1 (Goto write##writeR1)
+1111111111## ;Line 306 - Append # to R10 (Label write##writeR1)
+1111111111## ;Line 307 - Append # to R10
+1111111111111111111111111111#### ;Line 308 - Jump backwards 28 (Goto findRwriteR1) (Label moveRendwriteR1)
+111111111##### ;Line 309 - Case on R9 (Label findRendwriteR1)
+1111111### ;Line 310 - Jump forward 7 (Goto twoHasheswriteR1)
+11### ;Line 311 - Jump forward 2 (Goto rendWith1writeR1)
+111### ;Line 312 - Jump forward 3 (Goto rendWith#writeR1)
+11111111# ;Line 313 - Append 1 to R8 (Label rendWith1writeR1)
+111111### ;Line 314 - Jump forward 6 (Goto findRend2writeR1)
+11111111## ;Line 315 - Append # to R8 (Label rendWith#writeR1)
+1111### ;Line 316 - Jump forward 4 (Goto findRend2writeR1)
+111111111## ;Line 317 - Append # to R9 (Label twoHasheswriteR1)
+111111111## ;Line 318 - Append # to R9
+111111111111111### ;Line 319 - Jump forward 15 (Goto findRend3writeR1)
+111111111##### ;Line 320 - Case on R9 (Label findRend2writeR1)
+111111### ;Line 321 - Jump forward 6 lines
+111### ;Line 322 - Jump forward 3 lines
+11111111## ;Line 323 - Append # to R8
+1111#### ;Line 324 - Jump backwards 4 lines
+11111111# ;Line 325 - Append 1 to R8
+111111#### ;Line 326 - Jump backwards 6 lines
+11111111##### ;Line 327 - Case on R8
+111111### ;Line 328 - Jump forward 6 lines
+111### ;Line 329 - Jump forward 3 lines
+111111111## ;Line 330 - Append # to R9
+1111#### ;Line 331 - Jump backwards 4 lines
+111111111# ;Line 332 - Append 1 to R9
+111111#### ;Line 333 - Jump backwards 6 lines
+111111111##### ;Line 334 - Case on R9 (Label findRend3writeR1) (Label moveR#writeR1)
+111111111111111111111111111## ;Line 335 - Append # to R27
+11### ;Line 336 - Jump forward 2 (Goto rj_1#writeR1)
+1111111111### ;Line 337 - Jump forward 10 (Goto rj_##writeR1)
+1111111111# ;Line 338 - Append 1 to R10 (Label rj_1#writeR1)
+111111111##### ;Line 339 - Case on R9
+111111111111111111111111111## ;Line 340 - Append # to R27
+11### ;Line 341 - Jump forward 2 (Goto push1_2#writeR1)
+111### ;Line 342 - Jump forward 3 (Goto push#_2#writeR1)
+1111111111# ;Line 343 - Append 1 to R10 (Label push1_2#writeR1)
+1111111111#### ;Line 344 - Jump backwards 10 (Goto moveR#writeR1)
+1111111111## ;Line 345 - Append # to R10 (Label push#_2#writeR1)
+111111111111#### ;Line 346 - Jump backwards 12 (Goto moveR#writeR1)
+111111111##### ;Line 347 - Case on R9 (Label rj_##writeR1)
+1### ;Line 348 - Jump forward 1 lines
+1### ;Line 349 - Jump forward 1 lines
+1### ;Line 350 - Jump forward 1 lines
+1111111111# ;Line 351 - Append 1 to R10
+11111111111##### ;Line 352 - Case on R11
+111111111111111111111111111## ;Line 353 - Append # to R27
+11### ;Line 354 - Jump forward 2 (Goto writeInsert1writeR1)
+111### ;Line 355 - Jump forward 3 (Goto writeInsert#writeR1)
+1111111111# ;Line 356 - Append 1 to R10 (Label writeInsert1writeR1)
+11### ;Line 357 - Jump forward 2 (Goto writeTheSharpswriteR1)
+1111111111## ;Line 358 - Append # to R10 (Label writeInsert#writeR1)
+1111111111## ;Line 359 - Append # to R10 (Label writeTheSharpswriteR1)
+1111111111## ;Line 360 - Append # to R10
+111111111##### ;Line 361 - Case on R9
+111111### ;Line 362 - Jump forward 6 lines
+111### ;Line 363 - Jump forward 3 lines
+1111111111## ;Line 364 - Append # to R10
+1111#### ;Line 365 - Jump backwards 4 lines
+1111111111# ;Line 366 - Append 1 to R10
+111111#### ;Line 367 - Jump backwards 6 lines
+1111111111##### ;Line 368 - Case on R10
+111111### ;Line 369 - Jump forward 6 lines
+111### ;Line 370 - Jump forward 3 lines
+111111111## ;Line 371 - Append # to R9
+1111#### ;Line 372 - Jump backwards 4 lines
+111111111# ;Line 373 - Append 1 to R9
+111111#### ;Line 374 - Jump backwards 6 lines
+11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111#### ;Line 375 - Jump backwards 350 (Goto U) (Label moveRend#writeR1)
+11111111##### ;Line 376 - Case on R8 (Label UDoJumpForward)
+1### ;Line 377 - Jump forward 1 lines
+1### ;Line 378 - Jump forward 1 lines
+1### ;Line 379 - Jump forward 1 lines
+11111111##### ;Line 380 - Case on R8
+111111### ;Line 381 - Jump forward 6 lines
+111### ;Line 382 - Jump forward 3 lines
+111## ;Line 383 - Append # to R3
+1111#### ;Line 384 - Jump backwards 4 lines
+111# ;Line 385 - Append 1 to R3
+111111#### ;Line 386 - Jump backwards 6 lines
+11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111#### ;Line 387 - Jump backwards 362 (Goto U)
+11111111# ;Line 388 - Append 1 to R8 (Label UDoJumpBackward)
+11111111##### ;Line 389 - Case on R8 (Label UDoJumpBackwardJumping)
+11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111#### ;Line 390 - Jump backwards 365 (Goto U)
+1### ;Line 391 - Jump forward 1 lines
+1### ;Line 392 - Jump forward 1 lines
+111##### ;Line 393 - Case on R3
+1### ;Line 394 - Jump forward 1 lines
+1### ;Line 395 - Jump forward 1 lines
+1### ;Line 396 - Jump forward 1 lines
+11111111#### ;Line 397 - Jump backwards 8 (Goto UDoJumpBackwardJumping)
+11111111##### ;Line 398 - Case on R8 (Label UDoCases)
+1### ;Line 399 - Jump forward 1 lines
+1### ;Line 400 - Jump forward 1 lines
+1### ;Line 401 - Jump forward 1 lines
+11111111##### ;Line 402 - Case on R8 (Label findRreadR)
+1111111111111111111111111111### ;Line 403 - Jump forward 28 (Goto findRendreadR)
+1### ;Line 404 - Jump forward 1 lines
+1### ;Line 405 - Jump forward 1 lines
+111111111##### ;Line 406 - Case on R9 (Label moveRreadR)
+111### ;Line 407 - Jump forward 3 (Goto rj_emptyreadR)
+11111### ;Line 408 - Jump forward 5 (Goto rj_1readR)
+111111111111111### ;Line 409 - Jump forward 15 (Goto rj_#readR)
+1111111111## ;Line 410 - Append # to R10 (Label rj_emptyreadR)
+1111111111## ;Line 411 - Append # to R10
+111111111111111111### ;Line 412 - Jump forward 18 (Goto moveRendreadR)
+1111111111# ;Line 413 - Append 1 to R10 (Label rj_1readR)
+111111111##### ;Line 414 - Case on R9
+111### ;Line 415 - Jump forward 3 (Goto shouldnt_happenreadR)
+1111### ;Line 416 - Jump forward 4 (Goto push1_2readR)
+11111### ;Line 417 - Jump forward 5 (Goto push#_2readR)
+11111111# ;Line 418 - Append 1 to R8 (Label shouldnt_happenreadR)
+1111111111111#### ;Line 419 - Jump backwards 13 (Goto moveRreadR)
+1111111111# ;Line 420 - Append 1 to R10 (Label push1_2readR)
+111111111111111#### ;Line 421 - Jump backwards 15 (Goto moveRreadR)
+1111111111## ;Line 422 - Append # to R10 (Label push#_2readR)
+11111111111111111#### ;Line 423 - Jump backwards 17 (Goto moveRreadR)
+111111111##### ;Line 424 - Case on R9 (Label rj_#readR)
+111### ;Line 425 - Jump forward 3 (Goto write##readR)
+11### ;Line 426 - Jump forward 2 (Goto write##readR)
+1### ;Line 427 - Jump forward 1 (Goto write##readR)
+1111111111## ;Line 428 - Append # to R10 (Label write##readR)
+1111111111## ;Line 429 - Append # to R10
+1111111111111111111111111111#### ;Line 430 - Jump backwards 28 (Goto findRreadR) (Label moveRendreadR)
+111111111##### ;Line 431 - Case on R9 (Label findRendreadR)
+1111111### ;Line 432 - Jump forward 7 (Goto twoHashesreadR)
+11### ;Line 433 - Jump forward 2 (Goto rendWith1readR)
+111### ;Line 434 - Jump forward 3 (Goto rendWith#readR)
+11111111# ;Line 435 - Append 1 to R8 (Label rendWith1readR)
+111111### ;Line 436 - Jump forward 6 (Goto findRend2readR)
+11111111## ;Line 437 - Append # to R8 (Label rendWith#readR)
+1111### ;Line 438 - Jump forward 4 (Goto findRend2readR)
+111111111## ;Line 439 - Append # to R9 (Label twoHashesreadR)
+111111111## ;Line 440 - Append # to R9
+111111111111111### ;Line 441 - Jump forward 15 (Goto findRend3readR)
+111111111##### ;Line 442 - Case on R9 (Label findRend2readR)
+111111### ;Line 443 - Jump forward 6 lines
+111### ;Line 444 - Jump forward 3 lines
+11111111## ;Line 445 - Append # to R8
+1111#### ;Line 446 - Jump backwards 4 lines
+11111111# ;Line 447 - Append 1 to R8
+111111#### ;Line 448 - Jump backwards 6 lines
+11111111##### ;Line 449 - Case on R8
+111111### ;Line 450 - Jump forward 6 lines
+111### ;Line 451 - Jump forward 3 lines
+111111111## ;Line 452 - Append # to R9
+1111#### ;Line 453 - Jump backwards 4 lines
+111111111# ;Line 454 - Append 1 to R9
+111111#### ;Line 455 - Jump backwards 6 lines
+111111111##### ;Line 456 - Case on R9 (Label findRend3readR)
+11111111111## ;Line 457 - Append # to R11
+111111111### ;Line 458 - Jump forward 9 (Goto step3readR)
+1### ;Line 459 - Jump forward 1 (Goto twoSharpsreadR)
+111111111##### ;Line 460 - Case on R9 (Label twoSharpsreadR)
+1### ;Line 461 - Jump forward 1 lines
+1### ;Line 462 - Jump forward 1 lines
+1### ;Line 463 - Jump forward 1 lines
+1111111111## ;Line 464 - Append # to R10
+1111111111## ;Line 465 - Append # to R10
+111111111### ;Line 466 - Jump forward 9 (Goto step4readR)
+111111111##### ;Line 467 - Case on R9 (Label step3readR)
+11111111111## ;Line 468 - Append # to R11
+11### ;Line 469 - Jump forward 2 (Goto doPush1readR)
+111### ;Line 470 - Jump forward 3 (Goto doPush#readR)
+11111111# ;Line 471 - Append 1 to R8 (Label doPush1readR)
+111### ;Line 472 - Jump forward 3 (Goto step4readR)
+11111111## ;Line 473 - Append # to R8 (Label doPush#readR)
+1### ;Line 474 - Jump forward 1 (Goto step4readR)
+111111111##### ;Line 475 - Case on R9 (Label step4readR)
+111111### ;Line 476 - Jump forward 6 lines
+111### ;Line 477 - Jump forward 3 lines
+1111111111## ;Line 478 - Append # to R10
+1111#### ;Line 479 - Jump backwards 4 lines
+1111111111# ;Line 480 - Append 1 to R10
+111111#### ;Line 481 - Jump backwards 6 lines
+1111111111##### ;Line 482 - Case on R10
+111111### ;Line 483 - Jump forward 6 lines
+111### ;Line 484 - Jump forward 3 lines
+111111111## ;Line 485 - Append # to R9
+1111#### ;Line 486 - Jump backwards 4 lines
+111111111# ;Line 487 - Append 1 to R9
+111111#### ;Line 488 - Jump backwards 6 lines
+11111111##### ;Line 489 - Case on R8
+111111### ;Line 490 - Jump forward 6 lines
+111### ;Line 491 - Jump forward 3 lines
+1111111111## ;Line 492 - Append # to R10
+1111#### ;Line 493 - Jump backwards 4 lines
+1111111111# ;Line 494 - Append 1 to R10
+111111#### ;Line 495 - Jump backwards 6 lines
+1111111111##### ;Line 496 - Case on R10 (Label readRendreadR)
+1111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111#### ;Line 497 - Jump backwards 472 (Goto U)
+11### ;Line 498 - Jump forward 2 (Goto IncPcBy1)
+111# ;Line 499 - Append 1 to R3
+111# ;Line 500 - Append 1 to R3 (Label IncPcBy1)
+11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111#### ;Line 501 - Jump backwards 476 (Goto U)
