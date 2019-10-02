@@ -1,4 +1,67 @@
 :- use_module(library(clpfd)).
+:- use_module(library(dcg/basics)).
+
+sanity_(push1(X)) -->
+    "push1 ", whites, integer(X).
+sanity_(pushOctothorpe(X)) -->
+    "push# ", whites, integer(X).
+sanity_(jump(X)) -->
+    "jump ", whites, integer(X).
+sanity_(jumpb(X)) -->
+    "jumpb ", whites, integer(X).
+sanity_(case(X)) -->
+    "case ", whites, integer(X).
+sanity_(goto(X)) -->
+    "goto ", whites, string(X), eos.
+sanity_(label(X)) -->
+    "label ", whites, string(X), eos.
+
+sanity(A, X) :-
+    phrase(sanity_(X), A).
+sanity(A, X) :-
+    \+phrase(sanity_(X), A),
+    X = comment(A).
+
+lines(Str, X) :-
+    split_string(Str, "\n", "", Ls),
+    include(dif(""), Ls, Ls2),
+    maplist(string_codes, Ls2, X).
+
+sanityProg(Str, X) :-
+    lines(Str, Lines),
+    maplist(sanity, Lines, X).
+
+s(comment(X), Out) :- string_codes(Out, X).
+s(Term, Str2) :-
+    phrase(sanity_(Term), Str),
+    string_codes(Str2, Str).
+unparse(Ls, Bleh) :-
+    maplist(s, Ls, Bleh).
+
+replaceReg_(X, Y, push1(X), push1(Y)).
+replaceReg_(X, Y, pushOctothorpe(X), pushOctothorpe(Y)).
+replaceReg_(X, Y, case(X), case(Y)).
+replaceReg(What, With, In, Out) :-
+    replaceReg_(What, With, In, Out).
+replaceReg(What, With, In, Out) :-
+    \+replaceReg_(What, With, In, Out),
+    In = Out.
+
+prependLabel_(Y, label(X), label(Out)) :-
+    append(X, Y, Out).
+prependLabel_(Y, goto(X), goto(Out)) :-
+    append(X, Y, Out).
+prependLabel(What, In, Out) :-
+    prependLabel_(What,In,Out).
+prependLabel(What,In,Out) :-
+    \+prependLabel_(What,In,Out),
+    In = Out.
+
+rr(A, B, P1, P2) :-
+    maplist(replaceReg(A,B), P1,P2).
+
+pl(A, P1, P2) :-
+    maplist(prependLabel(A), P1, P2).
 
 ones_(0) -->
     "".
@@ -9,11 +72,6 @@ ones(X) -->
     ones_(X), {X #> 0}.
 
 program([]) --> "".
-%% program(Rest) -->
-%%     [X],
-%%     {dif(X, `1`), dif(X, `#`)},
-%%     program(Rest).
-
 program([push1(X) | Rest]) -->
     ones(X),
     "#",

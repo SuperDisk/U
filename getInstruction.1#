@@ -1,0 +1,90 @@
+label getInstruction
+
+push# 3
+
+case 3
+push# 13
+goto addOneAndRepeat
+goto writeInstrToR2AndR7
+
+label addOneAndRepeat
+push1 7
+goto writeInstrToR2
+
+label getInstr
+case 3
+push# 13
+goto writeInstrToR2
+goto writeInstrToR2AndR7
+
+label writeInstrToR2
+push1 3
+case 1
+push# 13
+goto writeOneAndRepeat
+goto write#ToR2
+
+label writeOneAndRepeat
+push1 2
+goto writeInstrToR2
+
+label write#ToR2
+push# 2
+case 1
+push# 13
+goto fixOneAndRepeat
+goto write#ToR2
+
+label fixOneAndRepeat
+push1 2
+goto getInstr
+
+label writeInstrToR2AndR7
+case 1
+goto fixProgram
+goto write1ToR2AndR7
+goto write#ToR2AndR7
+
+label write1ToR2AndR7
+push1 2
+push1 7
+goto writeInstrToR2AndR7
+
+label write#ToR2AndR7
+push# 2
+push# 7
+
+case 1
+goto fixProgram
+goto writeOneAndFix
+goto write#ToR2AndR7
+
+label writeOneAndFix
+push1 2
+goto fixProgram
+
+label fixProgram
+case 1
+jump 6
+jump 3
+push# 2
+jumpb 4
+push1 2
+jumpb 6
+
+case 2
+jump 6
+jump 3
+push# 1
+jumpb 4
+push1 1
+jumpb 6
+
+cases 3
+jump 1
+jump 1
+jump 1
+
+push1 3
+
+label getInstructionEnd

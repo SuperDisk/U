@@ -1,15 +1,13 @@
-clear5
+label parse#Start
+case 7
+goto parse#End
+push# 13
+goto parse#hash
 
-label start
-case 2
-goto end
-goto end
-goto hash
-
-label hash
-push# 5
-goto start
+label parse#hash
+push1 9
+goto parse#Start
 
 
-label end
+label parse#end
 push1 3

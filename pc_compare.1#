@@ -1,0 +1,58 @@
+label pcCompareStart
+case 3
+jump 8
+jump 4
+push# 5
+push# 2
+jumpb 5
+push1 5
+push1 2
+jumpb 8
+case 2
+jump 6
+jump 3
+push# 3
+jumpb 4
+push1 3
+jumpb 6
+
+case 4
+jump 8
+jump 4
+push# 6
+push# 2
+jumpb 5
+push1 6
+push1 2
+jumpb 8
+case 2
+jump 6
+jump 3
+push# 4
+jumpb 4
+push1 4
+jumpb 6
+
+push1 5
+
+label pcCompare
+case 6
+goto pcCompareClear6
+goto pcCompareCheck5
+push# 13
+
+label pcCompareCheck5
+case 5
+goto pcCompareEnd
+goto pcCompare
+push# 13
+
+
+label pcCompareClear6
+case 6
+goto pcCompareEnd
+goto pcCompareClear6
+goto pcCompareClear6
+
+label pcCompareEnd
+

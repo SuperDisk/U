@@ -1,13 +1,15 @@
-clear6
+label parse1Start
+case 7
+goto parse1End
+goto parse1One
+goto fixParse1#AndEnd
 
-label start
-case 2
-goto end
-goto one
-goto end
+label parse1One
+push1 8
+goto parse1Start
 
-label one
-push1 6
-goto start
+label fixParse1#AndEnd
+push# 7
+goto parse1End
 
-label end
+label parse1End

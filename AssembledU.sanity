@@ -1,0 +1,840 @@
+label main
+
+
+
+
+case 1
+jump 8
+jump 4
+push# 3
+push# 2
+jumpb 5
+push1 3
+push1 2
+jumpb 8
+case 2
+jump 6
+jump 3
+push# 1
+jumpb 4
+push1 1
+jumpb 6
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+case 3
+jump 7
+jumpb 2
+push1 4
+case 3
+jump 3
+jumpb 6
+jumpb 3
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+label U
+case 6
+jump 3
+goto U
+goto U
+
+case 5
+jump 3
+goto U
+goto U
+
+label pcCompareStart
+case 3
+jump 8
+jump 4
+push# 5
+push# 2
+jumpb 5
+push1 5
+push1 2
+jumpb 8
+case 2
+jump 6
+jump 3
+push# 3
+jumpb 4
+push1 3
+jumpb 6
+
+case 4
+jump 8
+jump 4
+push# 6
+push# 2
+jumpb 5
+push1 6
+push1 2
+jumpb 8
+case 2
+jump 6
+jump 3
+push# 4
+jumpb 4
+push1 4
+jumpb 6
+
+push1 5
+
+label pcCompare
+case 6
+goto pcCompareClear6
+goto pcCompareCheck5
+push# 13
+
+label pcCompareCheck5
+case 5
+goto pcCompareEnd
+goto pcCompare
+push# 14
+
+
+label pcCompareClear6
+case 6
+goto pcCompareEnd
+goto pcCompareClear6
+goto pcCompareClear6
+
+label pcCompareEnd
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+case 5
+goto getInstructionX
+goto UEnd
+push# 15
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+label getInstructionX
+
+push# 3
+case 3
+push# 16
+goto addOneAndRepeatX
+goto writeInstrToR2AndR7XHack
+
+label writeInstrToR2AndR7XHack
+push1 3
+goto writeInstrToR2AndR7X
+
+label addOneAndRepeatX
+
+push1 7
+goto writeInstrToR2X
+label getInstrX
+case 3
+push# 17
+goto writeInstrToR2X
+goto writeInstrToR2AndR7X
+label writeInstrToR2X
+push1 3
+case 1
+push# 18
+goto writeOneAndRepeatX
+goto write#ToR2X
+label writeOneAndRepeatX
+push1 2
+goto writeInstrToR2X
+label write#ToR2X
+push# 2
+case 1
+goto writeInstrToR2X
+goto fixOneAndRepeatX
+goto write#ToR2X
+label fixOneAndRepeatX
+push1 2
+goto getInstrX
+label writeInstrToR2AndR7X
+case 1
+goto fixProgramX
+goto write1ToR2AndR7X
+goto write#ToR2AndR7X
+label write1ToR2AndR7X
+push1 2
+push1 7
+goto writeInstrToR2AndR7X
+label write#ToR2AndR7X
+push# 2
+push# 7
+case 1
+goto fixProgramX
+goto writeOneAndFixX
+goto write#ToR2AndR7X
+label writeOneAndFixX
+push1 2
+goto fixProgramX
+label fixProgramX
+case 1
+jump 6
+jump 3
+push# 2
+jumpb 4
+push1 2
+jumpb 6
+case 2
+jump 6
+jump 3
+push# 1
+jumpb 4
+push1 1
+jumpb 6
+cases 3
+jump 1
+jump 1
+jump 1
+label getInstructionEndX
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+label parse1Start
+case 7
+goto parse1End
+goto parse1One
+goto fixParse1#AndEnd
+
+label parse1One
+push1 8
+goto parse1Start
+
+label fixParse1#AndEnd
+push# 7
+goto parse1End
+
+label parse1End
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+case 7
+push# 20
+push# 21
+goto USharpOneCase
+
+label USharpOneCase
+case 7
+goto UDoWrite1
+push# 22
+goto USharpTwoCase
+
+label USharpTwoCase
+case 7
+goto UDoWrite#
+push# 23
+goto USharpThreeCase
+
+label USharpThreeCase
+case 7
+goto UDoJumpForward
+push# 24
+goto USharpFourCase
+
+label USharpFourCase
+case 7
+goto UDoJumpBackward
+push# 25
+goto USharpFiveCase
+
+label USharpFiveCase
+case 7
+goto UDoCases
+push# 26
+push# 27
+
+label UDoWrite1
+push1 11
+case 8
+jump 1
+jump 1
+jump 1
+
+
+
+
+
+
+
+
+
+label findRwriteR
+case 8
+goto findRendwriteR
+jump 1
+jump 1
+label moveRwriteR
+case 9
+goto rj_emptywriteR
+goto rj_1writeR
+goto rj_#writeR
+label rj_emptywriteR
+push# 10
+push# 10
+goto moveRendwriteR
+label rj_1writeR
+push1 10
+case 9
+goto shouldnt_happenwriteR
+goto push1_2writeR
+goto push#_2writeR
+label shouldnt_happenwriteR
+push1 8
+goto moveRwriteR
+label push1_2writeR
+push1 10
+goto moveRwriteR
+label push#_2writeR
+push# 10
+goto moveRwriteR
+label rj_#writeR
+case 9
+goto write##writeR
+goto write##writeR
+goto write##writeR
+label write##writeR
+push# 10
+push# 10
+label moveRendwriteR
+goto findRwriteR
+label findRendwriteR
+case 9
+goto twoHasheswriteR
+goto rendWith1writeR
+goto rendWith#writeR
+label rendWith1writeR
+push1 8
+goto findRend2writeR
+label rendWith#writeR
+push# 8
+goto findRend2writeR
+label twoHasheswriteR
+push# 9
+push# 9
+goto findRend3writeR
+label findRend2writeR
+case 9
+jump 6
+jump 3
+push# 8
+jumpb 4
+push1 8
+jumpb 6
+case 8
+jump 6
+jump 3
+push# 9
+jumpb 4
+push1 9
+jumpb 6
+label findRend3writeR
+
+label moveR#writeR
+case 9
+push# 26
+goto rj_1#writeR
+goto rj_##writeR
+label rj_1#writeR
+push1 10
+case 9
+push# 26
+goto push1_2#writeR
+goto push#_2#writeR
+label push1_2#writeR
+push1 10
+goto moveR#writeR
+label push#_2#writeR
+push# 10
+goto moveR#writeR
+label rj_##writeR
+case 9
+jump 1
+jump 1
+jump 1
+push1 10
+case 11
+push# 26
+goto writeInsert1writeR
+goto writeInsert#writeR
+label writeInsert1writeR
+push1 10
+goto writeTheSharpswriteR
+label writeInsert#writeR
+push# 10
+label writeTheSharpswriteR
+push# 10
+push# 10
+case 9
+jump 6
+jump 3
+push# 10
+jumpb 4
+push1 10
+jumpb 6
+case 10
+jump 6
+jump 3
+push# 9
+jumpb 4
+push1 9
+jumpb 6
+
+
+label moveRend#writeR
+
+goto U
+
+label UDoWrite#
+push# 11
+case 8
+jump 1
+jump 1
+jump 1
+
+
+
+label findRwriteR1
+case 8
+goto findRendwriteR1
+jump 1
+jump 1
+label moveRwriteR1
+case 9
+goto rj_emptywriteR1
+goto rj_1writeR1
+goto rj_#writeR1
+label rj_emptywriteR1
+push# 10
+push# 10
+goto moveRendwriteR1
+label rj_1writeR1
+push1 10
+case 9
+goto shouldnt_happenwriteR1
+goto push1_2writeR1
+goto push#_2writeR1
+label shouldnt_happenwriteR1
+push1 8
+goto moveRwriteR1
+label push1_2writeR1
+push1 10
+goto moveRwriteR1
+label push#_2writeR1
+push# 10
+goto moveRwriteR1
+label rj_#writeR1
+case 9
+goto write##writeR1
+goto write##writeR1
+goto write##writeR1
+label write##writeR1
+push# 10
+push# 10
+label moveRendwriteR1
+goto findRwriteR1
+label findRendwriteR1
+case 9
+goto twoHasheswriteR1
+goto rendWith1writeR1
+goto rendWith#writeR1
+label rendWith1writeR1
+push1 8
+goto findRend2writeR1
+label rendWith#writeR1
+push# 8
+goto findRend2writeR1
+label twoHasheswriteR1
+push# 9
+push# 9
+goto findRend3writeR1
+label findRend2writeR1
+case 9
+jump 6
+jump 3
+push# 8
+jumpb 4
+push1 8
+jumpb 6
+case 8
+jump 6
+jump 3
+push# 9
+jumpb 4
+push1 9
+jumpb 6
+label findRend3writeR1
+
+
+
+label moveR#writeR1
+case 9
+push# 27
+goto rj_1#writeR1
+goto rj_##writeR1
+label rj_1#writeR1
+push1 10
+case 9
+push# 27
+goto push1_2#writeR1
+goto push#_2#writeR1
+label push1_2#writeR1
+push1 10
+goto moveR#writeR1
+label push#_2#writeR1
+push# 10
+goto moveR#writeR1
+label rj_##writeR1
+case 9
+jump 1
+jump 1
+jump 1
+push1 10
+case 11
+push# 27
+goto writeInsert1writeR1
+goto writeInsert#writeR1
+label writeInsert1writeR1
+push1 10
+goto writeTheSharpswriteR1
+label writeInsert#writeR1
+push# 10
+label writeTheSharpswriteR1
+push# 10
+push# 10
+case 9
+jump 6
+jump 3
+push# 10
+jumpb 4
+push1 10
+jumpb 6
+case 10
+jump 6
+jump 3
+push# 9
+jumpb 4
+push1 9
+jumpb 6
+
+label moveRend#writeR1
+
+goto U
+
+
+
+label UDoJumpForward
+
+case 8
+jump 1
+jump 1
+jump 1
+
+case 8
+jump 6
+jump 3
+push# 3
+jumpb 4
+push1 3
+jumpb 6
+
+goto U
+
+
+
+
+label UDoJumpBackward
+push1 8
+
+label UDoJumpBackwardJumping
+case 8
+goto U
+jump 1
+jump 1
+
+case 3
+jump 1
+jump 1
+jump 1
+
+goto UDoJumpBackwardJumping
+
+
+
+
+
+label UDoCases
+case 8
+jump 1
+jump 1
+jump 1
+
+
+
+label findRreadR
+case 8
+goto findRendreadR
+jump 1
+jump 1
+label moveRreadR
+case 9
+goto rj_emptyreadR
+goto rj_1readR
+goto rj_#readR
+label rj_emptyreadR
+push# 10
+push# 10
+goto moveRendreadR
+label rj_1readR
+push1 10
+case 9
+goto shouldnt_happenreadR
+goto push1_2readR
+goto push#_2readR
+label shouldnt_happenreadR
+push1 8
+goto moveRreadR
+label push1_2readR
+push1 10
+goto moveRreadR
+label push#_2readR
+push# 10
+goto moveRreadR
+label rj_#readR
+case 9
+goto write##readR
+goto write##readR
+goto write##readR
+label write##readR
+push# 10
+push# 10
+label moveRendreadR
+goto findRreadR
+label findRendreadR
+case 9
+goto twoHashesreadR
+goto rendWith1readR
+goto rendWith#readR
+label rendWith1readR
+push1 8
+goto findRend2readR
+label rendWith#readR
+push# 8
+goto findRend2readR
+label twoHashesreadR
+push# 9
+push# 9
+goto findRend3readR
+label findRend2readR
+case 9
+jump 6
+jump 3
+push# 8
+jumpb 4
+push1 8
+jumpb 6
+case 8
+jump 6
+jump 3
+push# 9
+jumpb 4
+push1 9
+jumpb 6
+label findRend3readR
+case 9
+push# 11
+goto step3readR
+goto twoSharpsreadR
+label twoSharpsreadR
+case 9
+jump 1
+jump 1
+jump 1
+push# 10
+push# 10
+goto step4readR
+label step3readR
+case 9
+push# 11
+goto doPush1readR
+goto doPush#readR
+label doPush1readR
+push1 8
+goto step4readR
+label doPush#readR
+push# 8
+goto step4readR
+label step4readR
+case 9
+jump 6
+jump 3
+push# 10
+jumpb 4
+push1 10
+jumpb 6
+case 10
+jump 6
+jump 3
+push# 9
+jumpb 4
+push1 9
+jumpb 6
+case 8
+jump 6
+jump 3
+push# 10
+jumpb 4
+push1 10
+jumpb 6
+label readRendreadR
+
+case 10
+goto U
+goto IncPcBy1
+push1 3
+label IncPcBy1
+push1 3
+goto U
+
+label UEnd
